@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuki</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        pre {
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background-color: #282c34;
+            color: #fafafa;
+        }
+
+        .container {
+            width: 100%;
+            padding: 1em;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+            gap: 1em;
+        }
+
+        textarea {
+            background: 0;
+            border: 2px solid rgba(255, 255, 255, .52);
+            padding: 1em;
+            width: 100%;
+            resize: vertical;
+            color: inherit; font: inherit;
+            font-family: monospace, monospace;
+            font-size: 87.5%;
+            outline: 0;
+            height: 240px;
+        }
+        textarea:focus {
+            border-color: #448aff;
+        }
+
+        .identifier { color: #6494ed; }
+        .keyword { color: #cf68e1; }
+        .newline, .whitespace { color: #3e404d; }
+        .comment { color: #676e95; font-style: italic; }
+        .jump { color: #f02b77; }
+        .string { color: #98c379; }
+        .number { color: #ff9070; }
+        .literal { color: #838fa7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea></textarea>
+        <pre></pre>
+    </div>
+    <script src="../src/example.js" type="module"></script>
+</body>
+</html>

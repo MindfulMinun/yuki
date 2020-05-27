@@ -1,0 +1,33 @@
+{
+    "name": "yuki",
+    "version": "0.1.0",
+    "description": "A scripting language for text-based games",
+    "main": "dist/yuki.js",
+    "types": "dist/yuki.d.js",
+    "author": "MindfulMinun <importantmails4bc@gmail.com> (https://benjic.xyz)",
+    "contributors": [],
+    "homepage": "https://github.com/MindfulMinun/yuki",
+    "repository": "github:MindfulMinun/yuki",
+    "type": "module",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "build": "rm -rf dist && npm run declaration:build && ./node_modules/.bin/babel src -d dist",
+        "declaration:build": "npx tsc",
+        "serve": "./node_modules/http-server/bin/http-server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+        "node": ">=8.0.0 <11.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6",
+        "http-server": "^0.12.3",
+        "typescript": "^3.9.2",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11"
+    },
+    "dependencies": {}
+}
